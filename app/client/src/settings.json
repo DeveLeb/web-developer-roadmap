@@ -3,6 +3,6 @@
     "server_url": "http://localhost:8080"
   },
   "production": {
-    "server_url": "http://3.75.235.119:8080"
+    "server_url": ""
   }
 }
