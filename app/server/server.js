@@ -2,25 +2,16 @@ require('dotenv').config();
 const express = require('express');
 const api = require('./api');
 const path = require('path');
+const cors = require('cors');
 const port = process.env.PORT || 8080;
 const app = express();
 
 // config express
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.use(cors());
 // api
 app.use(api);
-
-// serve static react files in production
-if (process.env.NODE_ENV === 'production'){
-
-  app.use(express.static(path.join(__dirname, 'client/build')));
-
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname + '/client/build/index.html'))
-  });
-}
 
 // handle errors from controllers
 app.use(function(err, req, res, next){
