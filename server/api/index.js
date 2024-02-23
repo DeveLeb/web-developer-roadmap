@@ -1,1 +1,1 @@
-module.exports = [require('./auth'), require('./user'), require('./quotes')];
+module.exports = [require('./quotes')];

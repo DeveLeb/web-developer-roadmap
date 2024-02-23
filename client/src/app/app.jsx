@@ -7,7 +7,6 @@ import { View } from 'components/lib';
 
 // routes
 import WelcomeRoutes from 'routes/welcome';
-import AuthRoutes from 'routes/auth';
 
 // tailwind css
 import '../css/output.css';
@@ -15,7 +14,7 @@ import '../css/output.css';
 // import settings with server_url
 import Settings from 'settings.json';
 
-const routes = [...WelcomeRoutes, ...AuthRoutes];
+const routes = [...WelcomeRoutes];
 
 export default function App(props) {
   // set the base url for API calls
