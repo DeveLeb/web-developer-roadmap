@@ -1,1 +1,1 @@
-module.exports = [require('./quotes')];
+module.exports = [require('./quotes'), require('./memes')];
