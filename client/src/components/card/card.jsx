@@ -8,7 +8,7 @@
  *   children: child component(s) to render
  *
  **********/
-
+import React from 'react';
 import Style from './card.tailwind.js';
 
 export function Card(props) {
