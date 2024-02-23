@@ -1,5 +1,6 @@
-const movieQuote = require('popular-movie-quotes');
+const quotesService = require("../service/quotesService")
 
 exports.get = async function (req, res) {
-  return res.status(200).json({ quote: movieQuote.getRandomQuote() });
+  randomQuote = await quotesService.get();
+  return res.status(200).json({ quote: randomQuote });
 };
